@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                   <h1> contacts</h1>
+
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>no</th>
+                                <th>name</th>
+                                <th>phoneno</th>
+                                <th>email</th>
+                                <th>houseno</th>
+                                <th></th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int i = 1;
+                            }
+
+                            @foreach (var contact in Model) 
+                            {
+                                <tr>
+                                    <td>@i</td>
+                                    <td>@contact["Name"].InnerText</td> 
+                                    <td>@contact["PhoneNo"].InnerText</td>
+                                    <td>@contact["Email"].InnerText</td>
+                                    <td>@contact["HouseNo"].InnerText</td> 
+                                    <td>
+                                        @Html.ActionLink("Details", "Details", new { id = @contact["Id"].InnerText }) |
+                                        @Html.ActionLink("Edit", "Edit", new { id = @contact["Id"].InnerText }) |
+                                        @Html.ActionLink("Delete", "Delete", new {  id = @contact["Id"].InnerText})
+
+                                    </td>
+
+                                </tr>
+                                i++;
+
+                            }
+                        </tbody>
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

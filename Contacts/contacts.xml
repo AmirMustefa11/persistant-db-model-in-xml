@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contacts>
+  <contact>
+    <Id>2</Id>
+    <Name>hiwotTadesse</Name>
+    <PhoneNo>0947723520</PhoneNo>
+    <Email>hiwot@gmail.com5</Email>
+    <HouseNo>55</HouseNo>
+  </contact>
+  <contact>
+    <Id>3</Id>
+    <Name>helina</Name>
+    <PhoneNo>0931181835</PhoneNo>
+    <Email>he@gmail.com</Email>
+    <HouseNo>3456</HouseNo>
+  </contact>
+  <contact>
+    <Id>2</Id>
+    <Name>abushG</Name>
+    <PhoneNo>0929496475</PhoneNo>
+    <Email>abush@yahoo.com</Email>
+    <HouseNo>1042</HouseNo>
+  </contact>
+</contacts>

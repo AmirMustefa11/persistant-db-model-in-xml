@@ -1,0 +1,53 @@
+﻿@model Contacts.Models.Contact 
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+   
+</head>
+    
+<body>
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>New Contact</h1>
+
+                </div>
+
+                <div class="card-body">
+                    @using (Html.BeginForm("Add", "Home"))
+                    {
+                        <div class="form-group" style="width:300px;">
+                            @Html.LabelFor(m => m.name)
+                            @Html.TextBoxFor(m => m.name, new { @class = "form-control" })
+
+                        </div>
+
+                        <div class="form-group" style="width:300px;">
+                            @Html.LabelFor(m => m.phoneno)
+                            @Html.TextBoxFor(m => m.phoneno, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group" style="width:300px;">
+                            @Html.LabelFor(m => m.email)
+                            @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group" style="width:300px;">
+                            @Html.LabelFor(m => m.houseno)
+                            @Html.TextBoxFor(m => m.houseno, new { @class = "form-control" })
+                        </div>
+                        <button type="submit" value="Add post" class="btn btn-primary">ADD</button>}
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+   
+</body>
+</html>

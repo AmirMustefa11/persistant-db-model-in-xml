@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>@Model["Name"].InnerText</h2>
+        <p>Name:=@Model["Name"].InnerText</p>
+        <p>phoneNo:=@Model["PhoneNo"].InnerText</p>
+        <p>email:=@Model["Email"].InnerText</p>
+        <p>houseNo:=@Model["HouseNo"].InnerText</p>
+       
+
+
+    </div>
+    <div>
+        @Html.ActionLink("Back", "Contact")
+    </div>
+
+
+</body>
+</html>

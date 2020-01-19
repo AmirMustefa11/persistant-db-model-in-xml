@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h1>New Contact</h1>
+
+                </div>
+
+                <div class="card-body">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-group" style="width:300px;">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="@Model["Name"].InnerText">
+
+                        </div>
+                        <div class="form-group" style="width:300px;">
+                            <label for="PhoneNo">PhoneNo</label>
+                            <input type="text" class="form-control" id="phoneno" name="PhoneNo" value="@Model["PhoneNo"].InnerText">
+                        </div>
+                        <div class="form-group" style="width:300px;">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" value="@Model["Email"].InnerText">
+                        </div>
+                        <div class="form-group" style="width:300px;">
+                            <label for="PhoneNo">HouseNo</label>
+                            <input type="text" class="form-control" id="houseno" name="HouseNo" value="@Model["HouseNo"].InnerText">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Delete</button>}
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div>
+        @Html.ActionLink("Back", "Contact")
+    </div>
+
+
+</body>
+</html>
